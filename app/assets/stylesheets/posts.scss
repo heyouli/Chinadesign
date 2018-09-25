@@ -1,3 +1,165 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.row {
+  background-color: #f7f3ee;
+}
+
+.main-bar {
+  padding-right: 5em;
+}
+
+.container-fluid {
+  background-color: #f7f3ee!important;
+}
+
+.post-category {
+  background-color: #f7f3ee!important;
+  border-color: #efd300!important;
+  border-top: solid;
+  border-width: 0.05em;
+  padding-top: 1em;
+}
+
+.post-category h5 {
+  text-align: center;
+}
+
+.sidebar-topic {
+  background-color: #f7f3ee;
+  padding-bottom: 3em;
+}
+
+.side-bar p {
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+.sidebar-social {
+  background-color: #f7f3ee;
+}
+
+.sidebar-icon {
+  width: 30px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.sidebar-icon img{
+  background-color: #f7f3ee!important;
+}
+
+.theme-image img {
+  margin-bottom: 3em;
+}
+
+.theme-image {
+  padding-left: 0px;
+}
+
+.col-lg-4,
+.col-sm-12,
+.col-lg-8 {
+  background-color: transparent;
+}
+
+.theme-category {
+  background-color: transparent;
+  margin-bottom: 1em;
+}
+
+.theme-category h6 {
+  background-color: #efd300;
+  text-transform: uppercase;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  display: inline-block;
+}
+
+.theme-category a {
+  background-color: #efd300;
+  font-weight: lighter;
+  font-size: 0.8em;
+  padding: 0.5em;
+}
+
+.theme-title h2 {
+  background-color: #f7f3ee;
+  text-align: left!important;
+}
+
+.theme-title a {
+  font-size: 1.8em;
+}
+
+.post-text p {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.post-manage {
+  display: inline-block;
+  background-color: #e9e5e0;
+  margin-bottom: 2em;
+}
+
+.post-manage a {
+  background-color: #e9e5e0;
+  font-size: 0.9em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
+.post-new {
+  padding: 0.3em;
+  display: inline-block;
+  background-color: #e9e5e0;
+  margin-bottom: 3em;
+  margin-left: 1em;
+}
+
+.post-new a {
+  font-weight: bold;
+}
+
+
+/* ============ Media Queries ============ */
+@media only screen and (max-width: 991px) {
+  .side-bar {
+    background-color: #f7f3ee;
+    padding-bottom: 3em;
+  }
+
+  .side-bar p {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+  }
+
+  .post-content {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .theme-image img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .sidebar-social {
+    text-align: center;
+  }
+
+  .sidebar-topic img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .sidebar-topic h5 {
+    text-align: center;
+  }
+}

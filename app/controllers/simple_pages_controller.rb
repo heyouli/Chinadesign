@@ -1,4 +1,6 @@
 class SimplePagesController < ApplicationController
-  def index
+  def landing_page
+    @featured_post = Post.first
+    @posts = Post.all
   end
 end
