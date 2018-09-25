@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container-fluid posts-content">
+  <div class="row">
+    <div class="col-lg-10 col-sm-12 main-bar">
+      <div class="container-fluid">
+        <div class="post-category">
+          <h5>New posts</h5>
+        </div><!-- /post-category -->
+        <div class="row">
+          <% @posts.each do |post| %>
+          <div class="col-lg-4 col-md-4 col-sm-12 theme-image">
+            <%= image_tag(post.image_url, class: "img img-fluid") %>
+          </div><!-- /theme-image -->
+          <div class="col-lg-8 col-md-8 col-sm-12 post-content">
+            <div class="theme-category">
+              <h6><a href="#"><%= post.theme %></h6></a>
+            </div><!-- /theme-category -->
+            <div class="theme-title">
+              <h2><a href="#"><%= post.name %></h2></a>
+            </div><!-- /theme-title -->
+            <div class="post-text">
+              <p><%= post.description %></p>
+            </div><!-- /post-text -->
+            <div class="post-manage">
+              <%= link_to 'Show', post %> / <%= link_to 'Edit', edit_post_path(post) %> / <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div><!-- /post-manage -->
+          </div><!-- /col-lg-8 col-sm-12 -->
+          <% end %>
+        </div><!-- /row -->
+      </div><!-- /container-fluid -->
+    </div><!-- /main-bar -->
+    <div class="col-lg-2 col-sm-12">
+      <div class="side-bar">
+        <div class="sidebar-topic">
+          <h5>About</h5>
+          <p>Design in China is a blog about Design, photography and food in China. Having lived in Beijing for over 10 years I call this place my home. Beeing a designer and a photographer I would like to share all things new and traditional in this area. Plus I am a great Chinese food-lover, and want to sahre some of my favourite recipes and new encounterings with you!</p>
+          <%= image_tag 'about.270x270.jpg', class: "img img-fluid" %>
+        </div><!-- /sidebar-topic -->
+        <div class="sidebar-topic">
+          <h5>Social Links</h5>
+          <div class="sidebar-social">
+            <div class="sidebar-icon">
+              <%= image_tag('instagram.svg', class: "img-fluid") %>
+            </div><!-- /sidebar-social -->
+            <div class="sidebar-icon">
+              <%= image_tag('linkedin.svg', class: "img-fluid") %>
+            </div><!-- /sidebar-social -->
+            <div class="sidebar-icon">
+              <%= image_tag('pinterest.svg', class: "img-fluid") %>
+            </div><!-- /sidebar-social -->
+          </div>
+        </div><!-- /sidebar-topic -->
+    </div><!-- /col-lg-2 col-sm-12 -->
+  </div><!-- /row -->
+</div><!-- /posts-content -->
+<div class="post-new">
+  <%= link_to 'New Post', new_post_path %>
+</div><!-- /post-new -->
