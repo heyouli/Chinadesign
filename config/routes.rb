@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'simple_pages/design'
+  get 'simple_pages/photography'
+  get 'simple_pages/recipes'
   resources :posts
   get 'simple_pages/about'
   get 'simple_pages/posts'
