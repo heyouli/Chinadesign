@@ -24,6 +24,23 @@ h1 {
   text-transform: uppercase;
   margin-bottom: 4%;
   background-color:  #f7f3ee!important;
+  border-color: #efd300!important;
+  border-top: solid;
+  border-width: 0.05em;
+  padding-top: 1em;
+}
+
+h3 {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 4%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  background-color: #f7f3ee!important;
+  border-color: #efd300!important;
+  border-top: solid;
+  border-width: 0.05em;
+  padding-top: 1em;
 }
 
 h5 {
@@ -79,6 +96,26 @@ a:visited {
   font-weight: 300;
 }
 
+.alert {
+  background-color: white;
+}
+
+.notice {
+  background-color: white;
+}
+
+p.alert {
+  color: red;
+}
+
+p.notice {
+  color: #cba90d!important;
+  font-size: 2em;
+  font-weight: bolder;
+  padding-bottom: 2em;
+  text-align: center;
+}
+
 /* ============ Navigation ============ */
 .logo {
   margin-left: auto;
@@ -91,6 +128,7 @@ a:visited {
 .navbar {
   background-color: #f7f3ee !important;
   border-color: transparent;
+  padding-bottom: 3em;
 }
 
 .navbar-nav {
@@ -161,11 +199,32 @@ a.nav-link {
   color: #3d3c3c;
 }
 
+.search_button {
+  background-color: transparent;
+  letter-spacing: 0.07em;
+  color: #efd300;
+  border: 1px solid #fff;
+}
+
+.search_button:hover  {
+  color: #3d3c3c;
+}
+
+.search_field {
+  margin-left: 5px;
+  color: #f7f3ee;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 5px;
+}
 
 /* ============ Carousel ============ */
 
 .carousel-item{
   background-color:  #f7f3ee!important;
+  padding-bottom: 2em;
 }
 
 .jumbotron-images {

@@ -1,12 +1,8 @@
-<p id="notice"><%= notice %></p>
-
 <div class="container-fluid posts-content">
   <div class="row">
     <div class="col-lg-10 col-sm-12 main-bar">
       <div class="container-fluid">
-        <div class="post-category">
-          <h5>New posts</h5>
-        </div><!-- /post-category -->
+          <h1>Newest post</h1>
         <div class="row">
           <% @posts.each do |post| %>
           <div class="col-lg-4 col-md-4 col-sm-12 theme-image">
@@ -30,30 +26,6 @@
         </div><!-- /row -->
       </div><!-- /container-fluid -->
     </div><!-- /main-bar -->
-    <div class="col-lg-2 col-sm-12">
-      <div class="side-bar">
-        <div class="sidebar-topic">
-          <h5>About</h5>
-          <p>Design in China is a blog about Design, photography and food in China. Having lived in Beijing for over 10 years I call this place my home. Beeing a designer and a photographer I would like to share all things new and traditional in this area. Plus I am a great Chinese food-lover, and want to sahre some of my favourite recipes and new encounterings with you!</p>
-          <%= image_tag 'about.270x270.jpg', class: "img img-fluid" %>
-        </div><!-- /sidebar-topic -->
-        <div class="sidebar-topic">
-          <h5>Social Links</h5>
-          <div class="sidebar-social">
-            <div class="sidebar-icon">
-              <%= image_tag('instagram.svg', class: "img-fluid") %>
-            </div><!-- /sidebar-social -->
-            <div class="sidebar-icon">
-              <%= image_tag('linkedin.svg', class: "img-fluid") %>
-            </div><!-- /sidebar-social -->
-            <div class="sidebar-icon">
-              <%= image_tag('pinterest.svg', class: "img-fluid") %>
-            </div><!-- /sidebar-social -->
-          </div>
-        </div><!-- /sidebar-topic -->
-    </div><!-- /col-lg-2 col-sm-12 -->
+    <%= render 'shared/sidebar' %>
   </div><!-- /row -->
 </div><!-- /posts-content -->
-<div class="post-new">
-  <%= link_to 'New Post', new_post_path %>
-</div><!-- /post-new -->

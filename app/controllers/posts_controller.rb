@@ -4,7 +4,12 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    if params[:q]
+      search_term = params[:q]
+      @posts = Post.search(search_term)
+    else
+      @posts = Post.all
+    end
   end
 
   # GET /posts/1
@@ -28,7 +33,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html { redirect_to '/simple_pages/index' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
