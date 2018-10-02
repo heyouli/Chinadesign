@@ -1,1 +1,39 @@
 <h1>Design</h1>
+<p id="notice"><%= notice %></p>
+
+<div class="container-fluid posts-content">
+  <div class="row">
+    <div class="col-lg-10 col-sm-12 main-bar">
+      <div class="container-fluid">
+        <div class="post-category">
+          <h5>Design</h5>
+        </div><!-- /post-category -->
+        <div class="row">
+          <% @design_post.each do |post| %>
+          <div class="col-lg-4 col-md-4 col-sm-12 theme-image">
+            <%= image_tag(post.image_url, class: "img img-fluid") %>
+          </div><!-- /theme-image -->
+          <div class="col-lg-8 col-md-8 col-sm-12 post-content">
+            <div class="theme-category">
+              <h6><a href="#"><%= post.theme %></h6></a>
+            </div><!-- /theme-category -->
+            <div class="theme-title">
+              <h2><a href="#"><%= post.name %></h2></a>
+            </div><!-- /theme-title -->
+            <div class="post-text">
+              <p><%= post.description %></p>
+            </div><!-- /post-text -->
+            <div class="post-manage">
+              <%= link_to 'Show', post %> / <%= link_to 'Edit', edit_post_path(post) %> / <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div><!-- /post-manage -->
+          </div><!-- /col-lg-8 col-sm-12 -->
+          <% end %>
+        </div><!-- /row -->
+      </div><!-- /container-fluid -->
+    </div><!-- /main-bar -->
+  <%= render 'shared/sidebar' %>
+  </div><!-- /row -->
+</div><!-- /posts-content -->
+<div class="post-new">
+  <%= link_to 'New Post', new_post_path %>
+</div><!-- /post-new -->
