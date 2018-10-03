@@ -144,10 +144,36 @@ p.notice {
   width: 100px;
 }
 
+.search-nav {
+ width: 10em;
+ float: right;
+}
+
+.search_button {
+  background-color: transparent;
+  letter-spacing: 0.07em;
+  color: #efd300;
+  border: 0px solid #fff;
+}
+
+.search_button:hover  {
+  color: #3d3c3c;
+}
+
+.search_field {
+  margin: 5px;
+  background-color: #fff;
+  border: none;
+  font-weight: lighter;
+  font-size: 1em;
+  width:6em;
+}
+
 .navbar {
   background-color: #f7f3ee !important;
   border-color: transparent;
   padding-bottom: 3em;
+  width: 100%;
 }
 
 .navbar-nav {
@@ -160,8 +186,7 @@ p.notice {
 .navbar-nav > li {
     display: inline-block;
     float:none;
-    margin-left:40px;
-    margin-right:40px;
+    margin-right:50px;
 }
 
 .navbar-nav {
@@ -170,7 +195,7 @@ p.notice {
 
 .navbar-nav li {
   background-color: #f7f3ee!important;
-  font-size: 1em;
+  font-size: 0.9em;
   text-transform: uppercase;
 }
 
@@ -216,25 +241,6 @@ a.nav-link {
 
 .header-nav {
   color: #3d3c3c;
-}
-
-.search_button {
-  background-color: transparent;
-  letter-spacing: 0.07em;
-  color: #efd300;
-  border: 1px solid #fff;
-}
-
-.search_button:hover  {
-  color: #3d3c3c;
-}
-
-.search_field {
-  padding: 5px;
-  background-color: #fff;
-  border: none;
-  font-weight: lighter;
-  font-size: 1em;
 }
 
 /* ============ Carousel ============ */
@@ -342,6 +348,7 @@ label.contact-label {
   color: #3d3c3c;
   font-size: 1em;
   font-weight: 300;
+  background-color: #f7f3ee;
 }
 
 #contact-button {
