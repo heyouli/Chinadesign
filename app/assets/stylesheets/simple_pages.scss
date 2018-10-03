@@ -13,6 +13,25 @@ body {
   background-color: #f7f3ee;
   color: #3d3c3c;
   margin-top: 1em;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.container {
+  position: relative; /* needed for footer positioning*/
+  height: auto !important; /* real browsers */
+  max-width: inherit;
+  min-height: 100%; /* real browsers */
+  padding-left: 2em;
+  padding-right: 2em;
+  background-color: #f7f3ee;
+}
+
+.message-page {
+  position: relative;
+  height: auto !important; /* real browsers */
+  min-height: 100%; /* real browsers */
+  background-color: #f7f3ee;
 }
 
 /* ============ Typography ============ */
@@ -211,13 +230,11 @@ a.nav-link {
 }
 
 .search_field {
-  margin-left: 5px;
-  color: #f7f3ee;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  background-color: transparent;
-  border: 1px solid #fff;
   padding: 5px;
+  background-color: #fff;
+  border: none;
+  font-weight: lighter;
+  font-size: 1em;
 }
 
 /* ============ Carousel ============ */
@@ -300,6 +317,50 @@ ol.carousel-indicators {
 }
 
 
+/* ============ Contact ============ */
+
+.message-field {
+  background-color: #f7f3ee!important;
+}
+
+label.contact-label {
+  background-color: #f7f3ee;
+}
+
+.form-group {
+  background-color: #f7f3ee;
+}
+
+.form-control {
+  background-color: #fff;
+  border: none;
+  font-weight: lighter;
+  font-size: 1em;
+}
+
+.contact-label {
+  color: #3d3c3c;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+#contact-button {
+  background-color: #3d3c3c;
+  color: #f7f3ee;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top: 3%;
+}
+
+.contact-img {
+  padding-bottom: 2em;
+  background-color: #f7f3ee;
+}
+
 /* ============ Footer ============ */
 
 .footer-content {
@@ -313,7 +374,8 @@ ol.carousel-indicators {
   padding-bottom: 1%;
   margin-left: 0;
   margin-right: 0;
-  width: 100%;
+width: 100%;
+bottom: 0; /* stick to bottom */
 }
 
 /* ============ Media Queries ============ */
