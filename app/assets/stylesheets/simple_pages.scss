@@ -274,7 +274,7 @@ a.nav-link {
 }
 
 .landing-carousel .carousel-caption {
-  background-color:  white;
+  background-color:  rgba(255, 255, 255, 0.8);
   position: absolute;
   display: inline-block;
   max-width: 440px;
@@ -286,6 +286,7 @@ a.nav-link {
 
 .landing-carousel .carousel-caption p{
   text-overflow: ellipsis;
+  background-color:  transparent!important;
 }
 
 ol.carousel-indicators {
@@ -330,7 +331,6 @@ ol.carousel-indicators {
 .mainpage-category h6 {
   background-color: transparent!important;
 }
-
 
 /* ============ Contact ============ */
 

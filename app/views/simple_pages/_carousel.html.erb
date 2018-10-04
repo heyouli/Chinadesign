@@ -20,7 +20,7 @@
           <h5><a href="#"><%= post.name %></h5></a>
         </div>
         <div class="post-text mainpage-text">
-          <p><%= post.description %></p>
+          <p><%= post.description.first(300) %> <%= link_to ' ( ...)', post %></p>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@
       <div class="container-fluid">
           <h1>Newest post</h1>
         <div class="row">
-          <% @posts.each do |post| %>
+          <% @posts.first(3).each do |post| %>
           <div class="col-lg-4 col-md-4 col-sm-12 theme-image">
             <%= image_tag(post.image_url, class: "img img-fluid") %>
           </div><!-- /theme-image -->
@@ -16,7 +16,7 @@
               <h2><a href="#"><%= post.name %></h2></a>
             </div><!-- /theme-title -->
             <div class="post-text">
-              <p><%= post.description %></p>
+              <p><%= post.description.first(200) %><%= link_to '(...)', post %></p>
             </div><!-- /post-text -->
             <div class="post-manage">
               <%= link_to 'Show', post %> / <%= link_to 'Edit', edit_post_path(post) %> / <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>

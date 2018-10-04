@@ -97,6 +97,10 @@
   text-align: left!important;
 }
 
+.theme-title {
+  background-color: transparent!important;
+}
+
 .theme-title a {
   font-size: 1.8em;
 }
@@ -105,6 +109,10 @@
   font-size: 1em;
   font-weight: 300;
   line-height: 1.5em;
+}
+
+.post-text {
+  background-color: transparent;
 }
 
 .post-manage {

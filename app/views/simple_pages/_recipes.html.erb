@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <h1>Recipes</h1>
   <div class="row">
-    <% @recipe_post.each do |post| %>
+    <% @recipe_post.first(3).each do |post| %>
     <div class="col-lg-4 col-md-4 col-sm-12 theme-image">
       <%= image_tag(post.image_url, class: "img img-fluid") %>
     </div><!-- /col-lg-8 col-sm-12 -->
