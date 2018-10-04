@@ -64,3 +64,6 @@ end
 
 # Provides user authentication functions
 gem 'devise'
+
+# Authorization functions
+gem 'cancancan', '~> 2.0'
