@@ -1,0 +1,14 @@
+<div class="comment-box">
+<% if signed_in? %>
+  <h2 id="newcomment-header">Write a comment</h2>
+  <%= form_for([@post, @post.comments.build]) do |f| %>
+      <div class="comment-box">
+        <div class="form-group">
+          <%= f.text_area :body, class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Submit", class: "form_label btn btn-light message-button", id:"contact-button" %>
+        </div >
+      </div >
+  <% end %>
+<% end %>

@@ -34,6 +34,7 @@ body {
   background-color: #f7f3ee;
 }
 
+
 /* ============ Typography ============ */
 h1 {
   font-weight: bold;
@@ -145,28 +146,33 @@ p.notice {
 }
 
 .search-nav {
- width: 10em;
  float: right;
 }
 
 .search_button {
   background-color: transparent;
-  letter-spacing: 0.07em;
   color: #efd300;
-  border: 0px solid #fff;
+  border: 0px;
 }
 
 .search_button:hover  {
   color: #3d3c3c;
 }
 
+#register-button {
+  padding:0;
+  margin: 0;
+}
+
 .search_field {
-  margin: 5px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
   border: none;
   font-weight: lighter;
   font-size: 1em;
   width:6em;
+  border-radius: 5px;
+  padding: 1%;
+  margin-right: 0;
 }
 
 .navbar {
@@ -243,6 +249,9 @@ a.nav-link {
   color: #3d3c3c;
 }
 
+.back-ground {
+  background-color:  #f7f3ee!important;
+}
 /* ============ Carousel ============ */
 
 .carousel-item{
@@ -338,8 +347,8 @@ label.contact-label {
 }
 
 .form-control {
-  background-color: #fff;
-  border: none;
+  background-color: rgba(255,255,255, 0.3);
+  border: white;
   font-weight: lighter;
   font-size: 1em;
 }
@@ -352,15 +361,16 @@ label.contact-label {
 }
 
 #contact-button {
-  background-color: #3d3c3c;
-  color: #f7f3ee;
+  background-color: #f7f3ee;
+  color: #efd300;
+  border-color: #efd300;
   font-size: 1em;
   text-transform: uppercase;
-  padding-left: 3%;
-  padding-right: 3%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  margin-top: 3%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-top: 1%;
 }
 
 .contact-img {

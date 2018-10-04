@@ -3,9 +3,9 @@
 <% end %>
 
 <div class="search-nav">
-<%= form_with(url: posts_path, method: 'get', local: true) do |form| %>
-<%= form.text_field :q, id: 'q', value: params[:q], class: "search_field", placeholder: "Search for"  %>
-<%= form.button'<i class="fa fa-search" aria-hidden="true"></i>'.html_safe, class:"my-2 my-sm-0 search_button", id: "register-button" %>
+<%= form_with(url: posts_path, method: 'get', local: true, class: "back-ground") do |form| %>
+<%= form.text_field :q, id: 'q', value: params[:q], class: "search_field" %>
+<%= form.button'<i class="fa fa-search back-ground" aria-hidden="true"></i>'.html_safe, class:"my-2 my-sm-0 search_button back-ground", id: "register-button" %>
 <% end %>
 </div>
 

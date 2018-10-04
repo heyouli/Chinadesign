@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <h2 id="comment-header">Comments</h2>
+    <% @comments.each do |comment| %>
+</div>
+<div class="post-comment">
+  <div class="postcomment-user"><%= comment.user.first_name %> </div>
+  <div class="postcomment-date"><%= "#{time_ago_in_words(comment.created_at)} ago" %></div>
+  <div class="postcomment-text"><%= comment.body %></div>
+</div>
+    <% end %>
+</div>

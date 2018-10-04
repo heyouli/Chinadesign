@@ -1,24 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="post-name">
+      <h2><%= @post.name %></h2>
+  <p class="post-info">
+    <%= @post.theme %> |
+    <%= @post.created_at %>
+  </p>
+</div>
+<div class="post-image">
+  <%= image_tag(@post.image_url, class: "img-fluid") if @post.image_url%>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @post.name %>
-</p>
+<div class="post-name">
+  <p class="post-info">
+    <%= link_to 'Edit', edit_post_path(@post) %> |
+    <%= link_to 'Back', post_path %>
+  </p>
+</div>
 
-<p>
-  <strong>Description:</strong>
+<div class="post-description">
   <%= @post.description %>
-</p>
+</div>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @post.image_url %>
-</p>
+<hr class="line-dotted" />
+  <%= render 'comments' %>
 
-<p>
-  <strong>Theme:</strong>
-  <%= @post.theme %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div>
+  <%= render 'new_comment' %>
+</div>
+</div>
+</div>

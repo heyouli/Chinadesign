@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
+
   resources :users
+  resources :posts do
+  resources :comments
+end # Makes comments resources are a subset of posts.
+
   get 'simple_pages/design'
   get 'simple_pages/photography'
   get 'simple_pages/recipes'
