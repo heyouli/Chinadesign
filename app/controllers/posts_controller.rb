@@ -16,6 +16,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @comments = @post.comments.order("created_at DESC")
+    @comments = @post.comments.paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /posts/new

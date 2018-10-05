@@ -12,9 +12,14 @@
 body {
   background-color: #f7f3ee;
   color: #3d3c3c;
+  margin-left: 2em;
+  margin-right: 2em;
   margin-top: 1em;
   margin-bottom: 0;
   height: 100%;
+  font-size: 0.8em;
+  line-height: 2em;
+  letter-spacing: 0.03em;
 }
 
 .container {
@@ -51,10 +56,10 @@ h1 {
 }
 
 h3 {
-  font-size: 1.6em;
+  font-size: 1em;
   font-weight: bold;
   margin-bottom: 4%;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   background-color: #f7f3ee!important;
   border-color: #efd300!important;
@@ -86,9 +91,6 @@ h6 {
 p {
   font-family: 'Exo', Helvetica, Arial, sans-serif;
   color: #3d3c3c;
-  font-size: 1.15em;
-  letter-spacing: 0.02em;
-  line-height: 1.7em;
   font-weight: 300;
   background-color:  #f7f3ee!important;
 }
@@ -97,7 +99,7 @@ h2 {
   font-family: 'Exo', Helvetica, Arial, sans-serif;
   font-weight: normal;
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 a {
@@ -107,8 +109,9 @@ a {
 }
 
 a:hover {
-  color: grey;
+  color: #efd300;
   background-color: transparent;
+  text-decoration: line-through;
 }
 
 a:visited {
@@ -145,14 +148,43 @@ p.notice {
   width: 100px;
 }
 
+.login-link {
+  float: right;
+  font-weight: bold;
+  display: inline;
+  background-color:  #f7f3ee!important;
+  color: #efd300!important;
+  margin-right: 1em;
+}
+
+.login-link:hover {
+  color: #3d3c3c!important;
+  text-decoration: none;
+}
+
 .search-nav {
  float: right;
+ display: inline;
+ background-color:  #f7f3ee!important;
 }
 
 .search_button {
   background-color: transparent;
+  display: inline;
   color: #efd300;
   border: 0px;
+}
+
+.search_field {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-weight: lighter;
+  font-size: 1em;
+  width:8em;
+  border-radius: 5px;
+  padding: 1%;
+  margin-right: 0;
+  display: inline;
 }
 
 .search_button:hover  {
@@ -162,17 +194,6 @@ p.notice {
 #register-button {
   padding:0;
   margin: 0;
-}
-
-.search_field {
-  background-color: rgba(255, 255, 255, 0.5);
-  border: none;
-  font-weight: lighter;
-  font-size: 1em;
-  width:6em;
-  border-radius: 5px;
-  padding: 1%;
-  margin-right: 0;
 }
 
 .navbar {
@@ -187,22 +208,21 @@ p.notice {
     margin:0 auto;
     display: block;
     text-align: center;
+    background-color: #f7f3ee!important;
+}
+
+.navbar a:hover {
+  color: #efd300;
+  text-decoration: line-through;
 }
 
 .navbar-nav > li {
     display: inline-block;
     float:none;
     margin-right:50px;
-}
-
-.navbar-nav {
-  background-color: #f7f3ee!important;
-}
-
-.navbar-nav li {
-  background-color: #f7f3ee!important;
-  font-size: 0.9em;
-  text-transform: uppercase;
+    background-color: #f7f3ee!important;
+    font-size: 0.9em;
+    text-transform: uppercase;
 }
 
 button.navbar-toggler {
@@ -225,7 +245,6 @@ color: #3d3c3c;
   letter-spacing: 0.07em;
   background-color:  #f7f3ee!important;
   text-decoration: none;
-  text-align: center;
   padding-bottom: 5%;
 }
 
@@ -383,19 +402,81 @@ label.contact-label {
 .footer-content {
   background-color: #3d3c3c;
   color: white;
-  font-size: 0.9em;
-  text-align: center;
   font-weight: lighter;
   height: 50px;
   padding-top: 1%;
   padding-bottom: 1%;
   margin-left: 0;
   margin-right: 0;
-width: 100%;
-bottom: 0; /* stick to bottom */
+  margin-top: 3em;
+  width: 100%;
+  bottom: 0; /* stick to bottom */
+}
+
+.footer-text {
+  display: inline;
+  background-color: #3d3c3c!important;
+  color: white;
+  font-size: 0.9em;
+  text-align: left;
+  padding-left: 2em;
+}
+
+.footer-nav {
+  margin-right: 2em;
+  display: inline;
+  background-color: #3d3c3c!important;
+  color: white;
+  float: right;
+}
+
+.footer-nav a {
+  color: white!important;
+}
+
+.footer-nav a:hover {
+  color: #efd300;
+}
+
+.footer-em {
+  background-color: #3d3c3c!important;
+  text-decoration: underline;
+  color: white!important;
 }
 
 /* ============ Media Queries ============ */
 @media only screen and (max-width: 991px) {
 
+  body {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 1em;
+  }
+
+  .navbar-expand {
+  margin-top: 30px;
+}
+  .navbar a, .dropdown-menu a, .dropdown-menu>li>a {
+    font-size: 2em;
+  }
+
+  .navbar-nav {
+    float:none;
+    background-color: #f7f3ee!important;
+  }
+
+  .navbar-nav > li {
+      display: block;
+      width: 100%;
+      float:none;
+      margin-top:20px;
+      background-color: #f7f3ee!important;
+      font-size: 0.9em;
+      text-transform: uppercase;
+  }
+
+  .container {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }

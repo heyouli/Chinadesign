@@ -2,12 +2,20 @@
 <div class="logo"><%= image_tag 'Logo.designinchina.svg', class: "img-fluid", alt: 'logo' %></div>
 <% end %>
 
-<div class="search-nav">
+<ul class=search-nav>
+<li class="search-nav">
 <%= form_with(url: posts_path, method: 'get', local: true, class: "back-ground") do |form| %>
 <%= form.text_field :q, id: 'q', value: params[:q], class: "search_field" %>
 <%= form.button'<i class="fa fa-search back-ground" aria-hidden="true"></i>'.html_safe, class:"my-2 my-sm-0 search_button back-ground", id: "register-button" %>
 <% end %>
-</div>
+</li>
+<% if user_signed_in? %>
+<li class="login-link"><%= link_to('Logout', destroy_user_session_path, method: :delete, class: "login-link") %></li>
+<% else %>
+<li class="login-link"><%= link_to('Login', new_user_session_path, class: "login-link")%></li>
+<% end %>
+</li>
+</ul>
 
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light main-navigation">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,16 +30,6 @@
       <li><%= link_to "About", simple_pages_about_path %></li>
       <li><%= link_to "Hire me", simple_pages_hireme_path %></li>
       <li><%= link_to "Contact", simple_pages_contact_path %></li>
-    <% if user_signed_in? %>
-    <li class="nav-item">
-      <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link") %>
-    </li>
-    <% else %>
-    <li class="nav-item">
-      <%= link_to('Login', new_user_session_path, class: "nav-link") %>
-    </li>
-    <% end %>
-    </li>
     </ul>
   </div>
 </nav>

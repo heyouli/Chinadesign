@@ -22,11 +22,9 @@
   <%= @post.description %>
 </div>
 
-<hr class="line-dotted" />
+<hr class="line-dotted"/>
   <%= render 'comments' %>
-
-<div>
+  <p class="comment-pagination"><%= will_paginate @comments %></p>
   <%= render 'new_comment' %>
-</div>
 </div>
 </div>

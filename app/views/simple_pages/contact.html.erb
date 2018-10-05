@@ -1,13 +1,5 @@
 <div class="container-fluid">
   <h1>Contact</h1>
-      <p>I'm happy to hear from you! </p>
-
-    <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-12">
-        <%= image_tag 'about.270x270.jpg', class: "img img-fluid contact-img" %>
-    </div>
-
-    <div class="col-lg-6 col-sm-12 contact-box">
     <%= flash[:notice] %>
     <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
       <div class="message-field">
@@ -26,6 +18,4 @@
           <%= form.submit "Send", id:"contact-button", class: "form_label btn btn-light message-button" %>
       </div>
         <% end %>
-      </div>
-    </div>
 </div>

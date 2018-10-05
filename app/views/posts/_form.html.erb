@@ -1,4 +1,5 @@
-<%= form_with(model: post, local: true) do |form| %>
+<div class="container-fluid">
+  <%= form_with(model: post, local: true) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -11,27 +12,30 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="message-field">
+  <div class="form-group">
+    <%= form.label :name, class:"contact-label" %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Post name"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+  <div class="form-group">
+    <%= form.label :description, class:"contact-label" %>
+    <%= form.text_area :description, class: "form-control", placeholder: "Post description", rows: 5, cols:40   %>
   </div>
 
-  <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url %>
+  <div class="form-group">
+    <%= form.label :image_url, class:"contact-label" %>
+    <%= form.text_field :image_url, class: "form-control", placeholder: "Image_url"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :theme %>
-    <%= form.text_field :theme %>
+  <div class="form-group">
+    <%= form.label :theme, class:"contact-label" %>
+    <%= form.text_field :theme, class: "form-control", placeholder: "Post theme" %>
   </div>
 
   <div class="actions">
-    <%= form.submit 'Submit', class:"btn btn-light post-new" %>
+    <%= form.submit 'Submit', id:"contact-button", class:"form_label btn btn-light message-button" %>
   </div>
 <% end %>
+</div>
+</div>

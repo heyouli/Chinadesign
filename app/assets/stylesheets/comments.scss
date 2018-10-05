@@ -29,6 +29,8 @@
 
 .comment-box {
   background-color: #f7f3ee!important;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 #comment-header {
@@ -40,4 +42,17 @@
 #newcomment-header {
   font-weight: bold!important;
   font-size: 1em;
+  background-color: #f7f3ee!important;
+  padding-left: 2em;
+}
+
+.comment-pagination p {
+  background-color: #f7f3ee!important;
+  padding-left: 2em;
+}
+
+.pagination {
+  background-color: #f7f3ee!important;
+  padding-left: 2em;
+  margin-right: 1em;
 }
