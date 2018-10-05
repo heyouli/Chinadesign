@@ -6,6 +6,10 @@
   <div class="postcomment-user"><%= comment.user.first_name %> </div>
   <div class="postcomment-date"><%= "#{time_ago_in_words(comment.created_at)} ago" %></div>
   <div class="postcomment-text"><%= comment.body %></div>
+  <% if signed_in? && current_user.admin? %>
+    <%= link_to ('<span class="fas fa-trash"></span>').html_safe, post_comment_path(comment.post, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
 </div>
     <% end %>
+
 </div>
