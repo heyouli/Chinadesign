@@ -24,12 +24,18 @@ body {
 
 .container {
   position: relative; /* needed for footer positioning*/
-  height: auto !important; /* real browsers */
-  max-width: inherit;
-  min-height: 100%; /* real browsers */
-  padding-left: 2em;
-  padding-right: 2em;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #f7f3ee;
+  max-width: auto;
+}
+
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f7f3ee;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .message-page {
@@ -58,7 +64,7 @@ h1 {
 h3 {
   font-size: 1em;
   font-weight: bold;
-  margin-bottom: 4%;
+  margin-bottom: 1.5em;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   background-color: #f7f3ee!important;
@@ -309,34 +315,22 @@ a.nav-link {
 }
 
 ol.carousel-indicators {
-  background-color:  transparent!important;
+  display: none;
 }
 
 .landing-carousel h5 {
-  background-color: white!important;
+  background-color: rgba(255, 255, 255, 0.8);
   font-size: 1em;
-  color: #3d3c3c;
+  color: red;
   padding-top: 1%;
 }
 
-.landing-carousel h6 {
-  background-color: white!important;
-}
-
-.landing-carousel p {
-  background-color: white!important;
-}
-
 .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233d3c3c' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-  height: 30px;
-  width: 30px;
+  display: none;
 }
 
 .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233d3c3c;' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-  height: 30px;
-  width: 30px;
+  display: none;
 }
 
 .mainpage-category {
@@ -348,6 +342,10 @@ ol.carousel-indicators {
 }
 
 .mainpage-category h6 {
+  background-color: transparent!important;
+}
+
+.mainpage-title  h5{
   background-color: transparent!important;
 }
 
@@ -407,6 +405,17 @@ label.contact-label {
 .hireme-text {
   text-align: justify;
 }
+
+
+/* ============ landing page ============ */
+
+.portfolio-image {
+  height: 0;
+   overflow: hidden;
+   padding-bottom: 60%;
+   margin-bottom: 3em;
+}
+
 
 /* ============ Footer ============ */
 
@@ -489,5 +498,29 @@ label.contact-label {
   .container {
     padding-left: 1em;
     padding-right: 1em;
+  }
+
+  .theme-image {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right:0;
+  }
+
+  .main-bar {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right:0;
+  }
+
+  .contact-img {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right:0;
   }
 }

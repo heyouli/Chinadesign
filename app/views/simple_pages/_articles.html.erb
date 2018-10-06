@@ -1,7 +1,6 @@
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <div class="col-lg-10 col-sm-12 main-bar">
-      <div class="container-fluid">
           <h3>Newest post</h3>
         <div class="row">
           <% @posts.first(3).each do |post| %>
@@ -24,7 +23,6 @@
           </div><!-- /col-lg-8 col-sm-12 -->
           <% end %>
         </div><!-- /row -->
-      </div><!-- /container-fluid -->
     </div><!-- /main-bar -->
     <%= render 'shared/sidebar' %>
   </div><!-- /row -->

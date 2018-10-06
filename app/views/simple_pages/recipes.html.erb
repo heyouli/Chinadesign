@@ -16,7 +16,7 @@
               <h2><a href="#"><%= post.name %></h2></a>
             </div><!-- /theme-title -->
             <div class="post-text">
-              <p><%= post.description %></p>
+              <p><%= post.description.first(200) %><%= link_to '(...)', post %></p>
             </div><!-- /post-text -->
             <div class="post-manage">
               <%= link_to 'Show', post %> / <%= link_to 'Edit', edit_post_path(post) %> / <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>

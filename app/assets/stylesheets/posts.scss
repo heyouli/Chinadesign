@@ -27,13 +27,12 @@
 }
 
 .sidebar-topic {
-  background-color: #f7f3ee;
-  padding-bottom: 3em;
+  background-color: #f7f3ee!important;
 }
 
-.side-bar p {
-  font-size: 0.9em;
-  line-height: 1.5em;
+.sidebar-topic img {
+  padding-bottom: 2em;
+  background-color: #f7f3ee!important;
 }
 
 .sidebar-social {
@@ -107,7 +106,7 @@
 
 .post-text p {
   font-size: 1em;
-  font-weight: 300;
+  font-weight: lighter;
   line-height: 1.5em;
 }
 
@@ -184,12 +183,8 @@ h2 {
   .side-bar {
     background-color: #f7f3ee;
     padding-bottom: 3em;
-  }
-
-  .side-bar p {
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.5em;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .post-content {
@@ -203,14 +198,9 @@ h2 {
     display: block;
   }
 
-  .sidebar-social {
-    text-align: center;
-  }
-
   .sidebar-topic img {
     margin-left: auto;
     margin-right: auto;
-    display: block;
   }
 
   .sidebar-topic h5 {

@@ -1,11 +1,13 @@
 <div class="container-fluid">
   <h3>Photography</h3>
-  <div class="row">
+  <div class="row image-row">
     <% @photography_post.first(3).each do |post| %>
-    <div class="col-lg-4 col-md-4 col-sm-12 theme-image">
+    <div class="col-lg-4 col-md-6 col-sm-12 theme-image">
+      <div class="image-container">
       <%= link_to post do %>
-      <%= image_tag(post.image_url, class: "img img-fluid") %>
+      <div class="portfolio-image"><%= image_tag(post.image_url, class: "img img-fluid") %></div>
       <% end %>
+    </div>
     </div><!-- /col-lg-8 col-sm-12 -->
     <% end %>
   </div><!-- /row -->
