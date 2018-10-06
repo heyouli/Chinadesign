@@ -53,6 +53,31 @@
 
 .pagination {
   background-color: #f7f3ee!important;
-  padding-left: 2em;
-  margin-right: 1em;
+  padding-left: 5em;
+  font-size: 0.9em;
+  color: #efd300;
+}
+
+.pagination a {
+  color: #efd300;
+  font-weight: bold;
+}
+
+.pagination a:hover {
+  color: #3d3c3c;
+}
+
+.previous_page {
+  background-color: #f7f3ee!important;
+  padding-right: 0.5em;
+}
+
+.current {
+  background-color: #f7f3ee!important;
+  padding-right: 0.5em;
+}
+
+.next_page {
+  background-color: #f7f3ee!important;
+  padding-left: 0.5em;
 }
