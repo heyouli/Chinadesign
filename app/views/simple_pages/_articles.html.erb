@@ -12,7 +12,7 @@
               <h6><a href="#"><%= post.theme %></h6></a>
             </div><!-- /theme-category -->
             <div class="theme-title">
-              <h2><a href="#"><%= post.name %></h2></a>
+              <h2><%= link_to post.name, post %></h2></a>
             </div><!-- /theme-title -->
             <div class="post-text">
               <p><%= post.description.first(200) %><%= link_to '(...)', post %></p>
